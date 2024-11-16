@@ -12,6 +12,14 @@ app.use(expressLayouts);
 //? memberitahukan express kalo kita viewnya menggunakan ejs
 app.set("view engine", "ejs");
 
+// Applicattion level middleware
+app.use((req,res,next) => {
+  console.log('Time: ', Date.now());
+  next();
+});
+
+
+
 app.get("/", (req, res) => {
   const mahasiswa = [
     {
