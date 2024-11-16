@@ -6,8 +6,10 @@ const port = 3000;
 
 //! memanggil express layout
 const expressLayouts = require('express-ejs-layouts');
-// untuk menggunakan express layoutnya
+//! untuk menggunakan express layoutnya (third-party middleware punya express)
 app.use(expressLayouts);
+
+//! third-party middleware morgan
 
 //? memberitahukan express kalo kita viewnya menggunakan ejs
 app.set("view engine", "ejs");
