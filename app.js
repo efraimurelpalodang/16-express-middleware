@@ -1,6 +1,7 @@
 //! root slash(/) adalah root dari website kita
 //! rout adalah halaman utama aplikasinya
 const express = require("express");
+const morgan = require('morgan');
 const app = express();
 const port = 3000;
 
@@ -10,6 +11,7 @@ const expressLayouts = require('express-ejs-layouts');
 app.use(expressLayouts);
 
 //! third-party middleware morgan
+app.use(morgan('dev'));
 
 //? memberitahukan express kalo kita viewnya menggunakan ejs
 app.set("view engine", "ejs");
