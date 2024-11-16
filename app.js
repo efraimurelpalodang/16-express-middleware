@@ -18,6 +18,9 @@ app.use((req,res,next) => {
   next();
 });
 
+// Build in middleware
+app.use(express.static('public'));
+
 
 
 app.get("/", (req, res) => {
